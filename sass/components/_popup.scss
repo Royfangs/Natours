@@ -9,6 +9,7 @@
   opacity: 0;
   visibility: hidden;
   transition: all .3s;
+  overflow: scroll;
 
 
   @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
@@ -82,7 +83,7 @@
 
   &:target &__content {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(.8);
   }
 
   &__close {
@@ -97,6 +98,10 @@
       display: inline-block;
       transition: all .2s;
       line-height: 1;
+
+      @include respond(phone) {
+        top: 80rem;
+      }
     }
 
     &:hover {
